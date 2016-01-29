@@ -16,6 +16,7 @@ public class Server {
 	DataOutputStream out;
 	ArrayList<String> messages;
 	public Server() throws IOException{
+		messages = new ArrayList();
 		serverSocket = new ServerSocket(80);
 		socket = serverSocket.accept();
 		in = new DataInputStream(socket.getInputStream());
@@ -23,7 +24,11 @@ public class Server {
 		out.writeUTF("Thank you for connecting to the server!");
 		new InputGUI(this);
 		while(true){
-			out.writeUTF(messages.get(0));
+			try{
+				out.writeUTF(messages.get(0));
+			}finally{
+				
+			}
 			messages.remove(0);
 		}
 	}
