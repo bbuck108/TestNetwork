@@ -26,6 +26,7 @@ public class OutputGUI extends JFrame{
 
 	public OutputGUI() {
 		setSize(240,240);
+		outputArray = new ArrayList();
 		
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
