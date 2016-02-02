@@ -18,6 +18,7 @@ public class OutputGUI extends JFrame{
 		JLabel lblTheHostName = new JLabel(p_1);
 		getContentPane().add(lblTheHostName, BorderLayout.CENTER);
 		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 	}
 

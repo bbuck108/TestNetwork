@@ -26,10 +26,11 @@ public class Server {
 		while(true){
 			try{
 				out.writeUTF(messages.get(0));
-			}finally{
+				messages.remove(0);
+			}catch (IndexOutOfBoundsException e){
 				
 			}
-			messages.remove(0);
+			
 		}
 	}
 	public void addToList(String p_1){
