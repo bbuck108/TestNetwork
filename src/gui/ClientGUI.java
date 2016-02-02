@@ -47,6 +47,8 @@ public class ClientGUI extends JFrame{
 		setSize(240,240);
 		setVisible(true);
 		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 	}
 
 	public String getHost() {
