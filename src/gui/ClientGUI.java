@@ -51,6 +51,7 @@ public class ClientGUI extends JFrame{
 		
 	}
 
+
 	public String getHost() {
 		// TODO Auto-generated method stub
 		while(!done){

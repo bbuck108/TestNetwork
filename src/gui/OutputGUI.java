@@ -11,6 +11,7 @@ public class OutputGUI extends JFrame{
 	 * 
 	 */
 	private static final long serialVersionUID = -8353624308759738454L;
+	ArrayList<String> outputArray;
 	
 	public OutputGUI(String p_1){
 
@@ -23,7 +24,7 @@ public class OutputGUI extends JFrame{
 		
 	}
 
-	public OutputGUI(ArrayList<String> outputArray) {
+	public OutputGUI() {
 		setSize(240,240);
 		
 		setVisible(true);
@@ -38,6 +39,9 @@ public class OutputGUI extends JFrame{
 				
 			}
 		}
+	}
+	public void addMessage(String p_1){
+		outputArray.add(p_1);
 	}
 
 }
