@@ -71,7 +71,7 @@ public class SelectionGUI extends JFrame{
 	public boolean isServer() {
 		// TODO Auto-generated method stub
 		while(!done){
-			System.out.println("This makes the program work for some reason....");
+			//System.out.println("This makes the program work for some reason....");
 		}
 		return server;
 	}
