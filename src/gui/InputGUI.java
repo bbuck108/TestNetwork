@@ -29,7 +29,7 @@ public class InputGUI extends JFrame{
 		JPanel panel = new JPanel();
 		getContentPane().add(panel, BorderLayout.CENTER);
 		JTextField lblTheHostName = new JTextField();
-		lblTheHostName.setColumns(20);
+		lblTheHostName.setColumns(15);
 		panel.add(lblTheHostName);
 		
 		JButton enter = new JButton("enter");

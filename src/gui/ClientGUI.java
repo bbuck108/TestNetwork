@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import java.awt.Dimension;
+import javax.swing.JPanel;
 
 public class ClientGUI extends JFrame{
 	String host;
@@ -22,17 +23,25 @@ public class ClientGUI extends JFrame{
 	public ClientGUI(){
 		ClientGUI window = this;
 		
-		
-		JButton btnSelect = new JButton("Enter");
-		getContentPane().add(btnSelect, BorderLayout.SOUTH);
+		JPanel panel = new JPanel();
+		getContentPane().add(panel, BorderLayout.NORTH);
 		
 		JLabel lblEnterHostName = new JLabel("Enter host name:");
-		getContentPane().add(lblEnterHostName, BorderLayout.NORTH);
+		panel.add(lblEnterHostName);
+		
+		JPanel panel_1 = new JPanel();
+		getContentPane().add(panel_1, BorderLayout.CENTER);
 		
 		txtHost = new JTextField();
-		txtHost.setMaximumSize(new Dimension(2147483647, 20));
-		getContentPane().add(txtHost, BorderLayout.CENTER);
-		txtHost.setColumns(10);
+		panel_1.add(txtHost);
+		txtHost.setColumns(15);
+		
+		JPanel panel_2 = new JPanel();
+		getContentPane().add(panel_2, BorderLayout.SOUTH);
+		
+		
+		JButton btnSelect = new JButton("Enter");
+		panel_2.add(btnSelect);
 		btnSelect.addActionListener(new ActionListener(){
 
 			@Override
