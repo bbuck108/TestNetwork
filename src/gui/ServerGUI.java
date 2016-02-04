@@ -20,7 +20,6 @@ public class ServerGUI extends JFrame{
 		JLabel lblTheHostName = new JLabel("The host name is: "+(Inet4Address.getLocalHost().getHostAddress()));
 		getContentPane().add(lblTheHostName, BorderLayout.CENTER);
 		setVisible(true);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 	}
 

@@ -3,6 +3,8 @@ package gui;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.IOException;
 
 import javax.swing.JButton;
@@ -32,7 +34,7 @@ public class InputGUI extends JFrame{
 		lblTheHostName.setColumns(15);
 		panel.add(lblTheHostName);
 		
-		JButton enter = new JButton("enter");
+		JButton enter = new JButton("Enter");
 		panel_1.add(enter);
 		enter.addActionListener(new ActionListener(){
 
@@ -46,8 +48,35 @@ public class InputGUI extends JFrame{
 			}
 			
 		});
+		lblTheHostName.setFocusable(true);
+		lblTheHostName.addKeyListener(new KeyListener(){
+
+			@Override
+			public void keyPressed(KeyEvent arg0) {
+				if(arg0.getKeyCode() == KeyEvent.VK_ENTER){
+					try {
+						p_1.addToList(lblTheHostName.getText());
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+
+			@Override
+			public void keyReleased(KeyEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void keyTyped(KeyEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
 		
-		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 		
 	}
